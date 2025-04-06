@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unit 1 - Use in Sentences</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background-color: #fff7f9;
+      color: #880e4f;
+      text-align: center;
+      padding: 20px;
+    }
+    header {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #e91e63;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    button {
+      background-color: #ec407a;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #ad1457;
+    }
+  </style>
+</head>
+<body>
+  <header>Unit 1 - Use in Sentences 📝</header>
+
+  <div class="card">
+    <h2>🍎 Apple</h2>
+    <p>I eat an apple every morning.</p>
+    <button onclick="say('I eat an apple every morning.')">🔊 Hear it</button>
+  </div>
+
+  <div class="card">
+    <h2>⚽ Ball</h2>
+    <p>The ball is red and bouncy.</p>
+    <button onclick="say('The ball is red and bouncy.')">🔊 Hear it</button>
+  </div>
+
+  <div class="card">
+    <h2>🐱 Cat</h2>
+    <p>The cat is sleeping on the sofa.</p>
+    <button onclick="say('The cat is sleeping on the sofa.')">🔊 Hear it</button>
+  </div>
+
+  <div class="card">
+    <h2>🐶 Dog</h2>
+    <p>My dog loves to play fetch.</p>
+    <button onclick="say('My dog loves to play fetch.')">🔊 Hear it</button>
+  </div>
+
+  <div class="card">
+    <h2>🥚 Egg</h2>
+    <p>I had an egg for breakfast.</p>
+    <button onclick="say('I had an egg for breakfast.')">🔊 Hear it</button>
+  </div>
+
+  <script>
+    function say(text) {
+      const msg = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(msg);
+    }
+  </script>
+</body>
+</html>

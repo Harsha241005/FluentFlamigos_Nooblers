@@ -1,0 +1,96 @@
+<!-- NEXT FILE: unit1_write.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unit 1 - Write Your Own Sentences</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background-color: #fff7f9;
+      color: #880e4f;
+      text-align: center;
+      padding: 20px;
+    }
+    header {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #e91e63;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #ec407a;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #ad1457;
+    }
+  </style>
+</head>
+<body>
+  <header>Unit 1 - Write Your Own Sentences ✍️</header>
+
+  <div class="card">
+    <h2>🍎 Apple</h2>
+    <input type="text" id="s1" placeholder="Type your sentence..." />
+    <button onclick="speak('s1')">🔊 Hear it</button>
+  </div>
+
+  <div class="card">
+    <h2>⚽ Ball</h2>
+    <input type="text" id="s2" placeholder="Type your sentence..." />
+    <button onclick="speak('s2')">🔊 Hear it</button>
+  </div>
+
+  <div class="card">
+    <h2>🐱 Cat</h2>
+    <input type="text" id="s3" placeholder="Type your sentence..." />
+    <button onclick="speak('s3')">🔊 Hear it</button>
+  </div>
+
+  <div class="card">
+    <h2>🐶 Dog</h2>
+    <input type="text" id="s4" placeholder="Type your sentence..." />
+    <button onclick="speak('s4')">🔊 Hear it</button>
+  </div>
+
+  <div class="card">
+    <h2>🥚 Egg</h2>
+    <input type="text" id="s5" placeholder="Type your sentence..." />
+    <button onclick="speak('s5')">🔊 Hear it</button>
+  </div>
+
+  <script>
+    function speak(id) {
+      const text = document.getElementById(id).value.trim();
+      if (text) {
+        const msg = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(msg);
+      } else {
+        alert("Please type your sentence first!");
+      }
+    }
+  </script>
+</body>
+</html>
